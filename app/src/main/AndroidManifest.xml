@@ -11,8 +11,7 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name=".RegisterActivity"
-            android:exported="true"
-            android:label="@string/title_activity_register" />
+            android:exported="true" />
         <activity
             android:name=".SpinnerActivity"
             android:exported="true" />
