@@ -95,7 +95,6 @@
             android:layout_marginTop="40dp"
             android:backgroundTint="#F0F2E9"
             android:text="Google"
-            android:textSize="14sp"
             android:textAllCaps="false"
             android:textColor="#214457"
             app:icon="@drawable/ic_google"
@@ -109,7 +108,6 @@
             android:layout_marginTop="40dp"
             android:backgroundTint="#F0F2E9"
             android:text="Facebook"
-            android:textSize="14sp"
             android:textAllCaps="false"
             android:textColor="#214457"
             app:icon="@drawable/ic_facebook"
@@ -169,8 +167,7 @@
             android:backgroundTint="#F2D555"
             android:text="Sign In"
             android:textAllCaps="false"
-            android:textColor="#214457"
-            android:textSize="14sp"/>
+            android:textColor="#214457"/>
     </LinearLayout>
 
     <LinearLayout
