@@ -69,7 +69,7 @@
                 />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/btnNavigateToSignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnGoogle"
             android:layout_width="164dp"
             android:layout_height="52dp"
             android:layout_marginTop="40dp"
@@ -105,7 +105,7 @@
             app:iconTint="@null" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnFacebook"
             android:layout_width="164dp"
             android:layout_height="52dp"
             android:layout_marginLeft="15dp"
@@ -129,13 +129,13 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputEmail"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEmail"
                 android:layout_width="344dp"
                 android:layout_height="52dp"
                 android:hint="Email"
@@ -143,13 +143,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputPassword"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputPassword"
                 android:layout_width="344dp"
                 android:layout_height="52dp"
                 android:hint="Password"
@@ -165,7 +165,7 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnSignin"
             android:layout_width="344dp"
             android:layout_height="52dp"
             android:backgroundTint="#F2D555"
@@ -184,6 +184,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
+            android:id="@+id/btnForgotPwd"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginBottom="43dp"

@@ -69,7 +69,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/btnNavigateToSignin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="7dp"
@@ -129,13 +129,13 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputFirstName"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputFirstName"
                     android:layout_width="344dp"
                     android:layout_height="52dp"
                     android:hint="First Name"
@@ -143,13 +143,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLastName"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputLastName"
                     android:layout_width="344dp"
                     android:layout_height="52dp"
                     android:hint="Last Name"
@@ -157,13 +157,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputEmail"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEmail"
                     android:layout_width="344dp"
                     android:layout_height="52dp"
                     android:hint="Email"
@@ -171,13 +171,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputPassword"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputPassword"
                     android:layout_width="344dp"
                     android:layout_height="52dp"
                     android:hint="Password"
@@ -190,6 +190,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
+            android:layout_marginBottom="18dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
@@ -202,26 +203,6 @@
                 android:textAllCaps="false"
                 android:textColor="#214457" />
         </LinearLayout>
-
-<!--        <LinearLayout-->
-<!--            android:id="@+id/linearLayout5"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="vertical"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent">-->
-
-<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_height="25dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_marginBottom="43dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_marginTop="11dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:text="Forgot Password"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:textAlignment="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:textColor="#214457"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:textSize="14sp"/>&ndash;&gt;-->
-<!--        </LinearLayout>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
