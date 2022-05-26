@@ -3,11 +3,13 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.Spinner
+import android.widget.*
+import android.view.View
 
-class SpinnerActivity : AppCompatActivity() {
+class SpinnerActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+  // data yang ingin ditampilkan dalam spinner(drop down) berupa list
+  val dataSet = arrayOf("SD", "SMP", "SMA", "Kuliah")
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_spinner)
@@ -21,9 +23,6 @@ class SpinnerActivity : AppCompatActivity() {
       startActivity(navigateSignIn)
     }
 
-    // data yang ingin ditampilkan dalam spinner(drop down) berupa list
-    val dataSet = arrayOf("SD", "SMP", "SMA", "Kuliah")
-
     // buat adapter, adapter digunakan untuk menghubungkan data-set dengan UI
     // pakai adapter bawaan android, support untuk 1 text
     val adapter: ArrayAdapter<String> = ArrayAdapter<String>(
@@ -33,6 +32,16 @@ class SpinnerActivity : AppCompatActivity() {
     )
 
     // set/pasang adapter ke spinner
-//    spinner.adapter = Spinner(this, dataSet)
+    spinner.adapter = adapter
   }
+
+  // buat toast saat salah satu data pada array dipilih
+  override fun onItemSelected(parent: AdapterView<*>?, view: View, position: Int, id: Long) {
+    // tampilkan toast dari list dataSet yang dipilih melalui spinner
+    Toast.makeText(this@SpinnerActivity,
+      dataSet[position],
+      Toast.LENGTH_SHORT)
+      .show()
+  }
+  override fun onNothingSelected(parent: AdapterView<*>?) {}
 }
