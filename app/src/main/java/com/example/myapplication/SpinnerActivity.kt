@@ -16,11 +16,17 @@ class SpinnerActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
     supportActionBar?.hide()
 
     val btnSignOut = findViewById<Button>(R.id.btnSignOut)
+    val btnImageLoaderPage = findViewById<Button>(R.id.btnNavigateToLoader)
     val spinner = findViewById<Spinner>(R.id.spinner)
 
     btnSignOut.setOnClickListener{
       val navigateSignIn = Intent(this@SpinnerActivity, MainActivity::class.java)
       startActivity(navigateSignIn)
+    }
+
+    btnImageLoaderPage.setOnClickListener {
+      val navigateLoadImage = Intent(this@SpinnerActivity, LoadImageActivity::class.java)
+      startActivity(navigateLoadImage)
     }
 
     // buat adapter, adapter digunakan untuk menghubungkan data-set dengan UI
