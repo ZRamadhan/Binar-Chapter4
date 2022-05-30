@@ -44,15 +44,15 @@ class LoadImageActivity : AppCompatActivity() {
       getLocationPermission()
       
       if (permissionChecking == PackageManager.PERMISSION_GRANTED){
-        
+        getLatLong()
         Toast.makeText(this,"Permission Location Granted!",Toast.LENGTH_LONG).show()
       } else {
+        getLocationPermission()
         Toast.makeText(this,"Permission Location Not Granted!",Toast.LENGTH_LONG).show()
       }
     }
   }
   
-  @RequiresApi(Build.VERSION_CODES.M)
   override fun onRequestPermissionsResult(
     requestCode: Int,
     permissions: Array<out String>,
@@ -60,10 +60,8 @@ class LoadImageActivity : AppCompatActivity() {
   ) {
     if (requestCode == 201){
       if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-        getLatLong()
         Toast.makeText(this,"Permission Granted onRuntime",Toast.LENGTH_LONG).show()
       } else {
-        getLocationPermission()
         Toast.makeText(this,"Permission Denied onRuntime",Toast.LENGTH_LONG).show()
       }
     }
