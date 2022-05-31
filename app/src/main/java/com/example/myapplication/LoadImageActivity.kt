@@ -40,19 +40,21 @@ class LoadImageActivity : AppCompatActivity() {
     
     btnCheck.setOnClickListener {
       val permissionChecking = checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION)
-      
-      getLocationPermission()
-      
+
+//    pengecekan apakah sudah punya permission
       if (permissionChecking == PackageManager.PERMISSION_GRANTED){
         getLatLong()
         Toast.makeText(this,"Permission Location Granted!",Toast.LENGTH_LONG).show()
       } else {
+//      method untuk mendapatkan permission akan dipanggil apabila aplikasi masih belum mempunyai permission
+//      untuk akses ke fine location
         getLocationPermission()
         Toast.makeText(this,"Permission Location Not Granted!",Toast.LENGTH_LONG).show()
       }
     }
   }
-  
+
+//  method  untuk menampilkan permission yang sudah ada terhadap aplikasi
   override fun onRequestPermissionsResult(
     requestCode: Int,
     permissions: Array<out String>,
@@ -68,12 +70,14 @@ class LoadImageActivity : AppCompatActivity() {
     
     super.onRequestPermissionsResult(requestCode, permissions, grantResults)
   }
-  
+
+//  method yang digunakan untuk memberikan permission
   @RequiresApi(Build.VERSION_CODES.M)
   private fun getLocationPermission(){
     requestPermissions(arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 201)
   }
-  
+
+//  method untuk mendapatkan koordinat latitude dan longitude
   @SuppressLint("MissingPermission")
   private fun getLatLong(){
     val locationManager = applicationContext.getSystemService(Context.LOCATION_SERVICE) as LocationManager
